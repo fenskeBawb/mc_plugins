@@ -1,0 +1,4 @@
+#!/bin/bash
+user=$(whoami); if [[ $user != "pi" ]]; then echo "Cannot run as ${user} - expecting pi"; exit; fi
+cd "$(dirname "$0")"
+exec java  -Xms4508M -Xmx5430M -jar spigot-1.18.1.jar --nogui
